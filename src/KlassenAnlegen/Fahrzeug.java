@@ -12,14 +12,22 @@ public class Fahrzeug {
 	}
 	
 	public void setGewicht(double g) {
-		gewicht =g;
+		if (g>0)
+			gewicht =g;
         
+
     }	
 	public long getLaufleistung() {
 		return laufleistung;
 	}
 	public String toString() {
-		// TODO Auto-generated method stub
 		return "Laufleistung="+getLaufleistung()+" Gewicht="+getGewicht();
     }
+	public void drive(int km) {
+		if (km>0)
+		  laufleistung += km;
+	}
+	public void drive(int dauer,int geschwindigkeit) {
+		drive(dauer*geschwindigkeit);
+	}
 }

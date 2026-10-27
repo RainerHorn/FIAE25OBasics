@@ -2,11 +2,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import KlassenAnlegen.Fahrzeug;
+import KlassenAnlegen.Priority;
 import KlassenAnlegen.Wuerfel;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Wuerfel w1 = new Wuerfel();
+       /* Wuerfel w1 = new Wuerfel();
         w1.werfen();
         System.out.println("Würfel 1: " + w1.anzeigen());
         Wuerfel w2 = new Wuerfel();
@@ -36,6 +37,15 @@ public class App {
 	    System.out.println ("Fa1="+fa1.toString());
 	    System.out.println ("Fa2="+fa2.toString());
 	    System.out.println ("Das Durchgeschnittsgewicht beträgt:"+averageWeight(fa1, fa2));
+*/        
+        
+        Priority p1 = new Priority();
+        Priority p2 = new Priority("Hoch");
+        Priority p3 = new Priority(1, "Mittel");
+        System.out.println("Priority 1: " + p1.getName() + ", Wert: " + p1.getValue());
+        System.out.println("Priority 2: " + p2.getName() + ", Wert: " + p2.getValue());
+        System.out.println("Priority 3: " + p3.getName() + ", Wert: " + p3.getValue()); 
+
     }
     private static double averageWeight(Fahrzeug f1, Fahrzeug f2) {
         return (f1.getGewicht() + f2.getGewicht()) / 2;
